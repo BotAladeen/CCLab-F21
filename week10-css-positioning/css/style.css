@@ -1,0 +1,28 @@
+body{
+  background-color: DarkBlue;
+  margin: 0;
+}
+.box{
+  background-color: gray;
+  width:200px;
+  height:12cm;
+  border: 3px dotted white;
+  /* margin:50px; */
+  padding:20px;
+}
+.title{
+  background-color: yellow;
+}
+
+.description {
+  background-color: hotpink;
+}
+ .special-box{
+   background-color: crimson;
+   width:5cm;
+   height:7cm;
+   border: 5px dotted black;
+   position:fixed;
+   left:10cm;
+   top:12cm;
+ }
