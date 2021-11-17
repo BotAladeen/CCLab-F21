@@ -1,4 +1,4 @@
-console.log("Loaded!");
+alert("Welcome to Carnival!");
 let themeClrs = [
   "Crimson",
   "OrangeRed",
@@ -18,7 +18,9 @@ let explosions = [];
 let houses = [];
 
 function setup(){
-  createCanvas(windowWidth, 0.9*windowHeight);
+  let canvas = createCanvas(0.95*windowWidth, 0.95*windowHeight);
+  canvas.id("p5-canvas");
+  noCursor();
     frameRate(90);
     thelauncher = new Launcher();
     drawHouses(50, 50);
@@ -235,13 +237,13 @@ class House {
 } //object4
 
 function keyPressed() {
-  if (keyCode == RIGHT_ARROW || keyCode == DOWN_ARROW) {
+  if (keyCode == RIGHT_ARROW) {
     if (clrIndex < themeClrs.length - 1) {
       clrIndex += 1;
     } else if (clrIndex == themeClrs.length - 1) {
       clrIndex = 0;
     }
-  } else if (keyCode == LEFT_ARROW || keyCode == UP_ARROW) {
+  } else if (keyCode == LEFT_ARROW) {
     if (clrIndex > 0) {
       clrIndex -= 1;
     } else if (clrIndex == 0) {
@@ -275,12 +277,11 @@ function showParameters(size) {
     fill(128, 200);
     text("move the mouse to position the launcher", 0, 4 * size);
     text("press Space to launch", 0, 5 * size);
-    text("press arrow keys to cycle through colors", 0, 6 * size);
+    text("press ← and → to cycle through colors", 0, 6 * size);
     text("press R to randomize color", 0, 7 * size);
     text("press F to remove fireworks", 0, 8 * size);
     text("press B to clear background", 0, 9 * size);
     text("press H to repaint houses", 0, 10 * size);
-    text("press P to show parameters", 0, 11 * size);
     pop();
   }
 } //show parameters in the top-left corner

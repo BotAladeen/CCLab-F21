@@ -1,6 +1,9 @@
 html, body {
+margin:0;
+padding:0;
+}
+body {
   margin: 0;
-  padding: 0;
 }
 h1{
   font-family: fantasy;
@@ -11,4 +14,19 @@ h1{
   text-align: center;
   font-family: fantasy;
 }
+#artistInfo{
+background-color: DarkViolet;
+width:150px;
+height:200px;
+position: absolute;
+right: 2.5%;
+top: 10px;
+text-indent: 20px;
+color: white;
+}
+#p5-canvas {
+  display: block;
+  position: relative;
+  margin-left: 2.5%;
+  align-self: center;
 }
