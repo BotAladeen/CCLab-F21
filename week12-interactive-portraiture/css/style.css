@@ -1,0 +1,16 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+h1{
+  text-align: center;
+}
+#signalControl{
+  text-align: center;
+  font-size: 30px;
+}
+#TVset {
+  display: block;
+  position: absolute;
+margin-left: 5%;
+}
