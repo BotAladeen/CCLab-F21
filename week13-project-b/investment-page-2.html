@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>The Feast</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/lib/p5.js" type="text/javascript"></script>
+  <script src="js/lib/p5.sound.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  localStorage.setItem("investmentNum", 2);
+  </script>
+</head>
+<body>
+
+  <!-- <audio src="assets/spark.mp3" autoplay id="bgm">
+</audio> -->
+<audio src="assets/powerplant.mp3" autoplay id="bgm">
+</audio>
+<script type="text/javascript">
+var bgm = document.getElementById("bgm");
+bgm.volume = 0.2;
+</script>
+
+<script src="js/background1.js" type="text/javascript"></script>
+<div class="investment-page-content">
+  <h1>II. Power Plant</h1>
+  <img src="assets/powerplant1.png" alt="a power plant" height="512px">
+  <p>How much to invest in this?</p>
+  <p>Estimated Sucess%: 41% Return: 283%</p>
+  <input type="text" class="investmentinput" id='textbox2' placeholder="↵ to confirm" required onchange="
+  let investmentNum=getItem('investmentNum');
+  storeItem('investmentAmount', document.getElementById('textbox'+investmentNum).value);
+  document.location='result-page.html';"> million
+  <br>
+  <button type="button" class="nobutton" onclick="let investmentNum=getItem('investmentNum');
+  storeItem('investmentAmount', 0);
+  document.location='investment-page-'+(investmentNum*1+1)+'.html';">or or Explore Another Opportunity</button>
+</div>
+
+</body>
+</html>

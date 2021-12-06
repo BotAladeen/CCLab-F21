@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>The Feast</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/lib/p5.js" type="text/javascript"></script>
+  <script src="js/lib/p5.sound.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  localStorage.setItem('investmentAmount', 0);
+  localStorage.setItem('investmentNum', 0);
+  localStorage.setItem('investment1Profit', 0);
+  localStorage.setItem('investment2Profit', 0);
+  localStorage.setItem('investment3Profit', 0);
+  localStorage.setItem('investment4Profit', 0);
+  localStorage.setItem('investment5Profit', 0);
+  </script>
+</head>
+<body>
+  <audio src="assets/caromhall.mp3" autoplay loop id="bgm">
+  </audio>
+  <script type="text/javascript">
+  var bgm = document.getElementById("bgm");
+  bgm.volume = 0.25;
+  </script>
+  <script src="js/background1.js" type="text/javascript">
+  </script>
+  <div id="openText">
+    <h1>The Feast</h1>
+    <p>Ever thought about going into finance?</p>
+    <p>Here, you are provided with a chance to make eminent business ventures with the high stakes</p>
+    <p>You have finally risen to the top of a established investment bank...</p>
+    <p>With millions in hand, you start to make your investments...</p>
+    <button type="button" onclick="document.location='investment-page-1.html'" id="startButton" autofocus > <p> Beat Everyone Else! </p></button>
+  </div>
+
+</body>
+</html>
